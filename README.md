@@ -81,3 +81,27 @@ CardOps는 신용카드 고객 데이터를 바탕으로 고객의 이탈 가능
 6. 기본 모델, 특징공학 모델, 하이퍼파라미터 탐색 결과를 비교해 과제별 최종 모델을 선정합니다.
 7. React, FastAPI, TiDB Cloud를 연동해 고객 분석 결과를 조회하고 활용할 수 있는 서비스를 구현합니다.
 8. GitHub와 Render를 이용해 프론트엔드와 백엔드를 배포하고, Docker Compose로 재현 가능한 로컬 개발 환경을 구성합니다.
+
+<br />
+
+# 3. 기술 스택
+
+| 구분 | 기술 | 활용 |
+| --- | --- | --- |
+| Frontend | React 19, TypeScript 5.9, Vite 8 | 사용자 인증, 고객 조회, 부서별 대시보드 및 캠페인 화면 구현 |
+| Visualization | Recharts 3 | 이탈 위험도, 고객 분포, 모델 및 캠페인 성과 시각화 |
+| Backend | Python 3.13, FastAPI, Uvicorn, Pydantic | REST API, 요청 검증, 인증 및 머신러닝 모델 서빙 |
+| Authentication | JWT, Argon2, HttpOnly Cookie | 사용자 인증, 비밀번호 해시, 역할별 접근 제어 |
+| Database | TiDB Cloud, MySQL 8.4, SQLAlchemy, PyMySQL | 운영·로컬 데이터 저장, ORM 및 MySQL 프로토콜 연결 |
+| Migration | Alembic | 데이터베이스 스키마 버전 관리 및 마이그레이션 |
+| Data Analysis | Pandas, NumPy, PyArrow | 데이터 정제, 전처리, 분석 및 배치 처리 |
+| Machine Learning | scikit-learn, LightGBM, XGBoost | 분류·회귀·군집 모델 학습, 평가 및 예측 |
+| Hyperparameter Search | GridSearchCV, RandomizedSearchCV, Optuna | 모델별 하이퍼파라미터 탐색 및 성능 비교 |
+| Model Artifact | Joblib | 학습된 분류·회귀·군집 모델 저장 및 FastAPI 적재 |
+| Face Authentication | ONNX Runtime, OpenCV, SCRFD, ArcFace | 얼굴 검출, 임베딩 생성 및 얼굴 인증 |
+| Local Infrastructure | Docker, Docker Compose | Frontend, Backend, Model Builder, MySQL 로컬 실행 환경 구성 |
+| Deployment | Render Web Service, Render Static Site | FastAPI 백엔드와 React 정적 사이트 배포 |
+| Collaboration | Git, GitHub | 소스 코드 버전 관리, 브랜치 병합 및 Render 자동 배포 연동 |
+| Test & Quality | Pytest, Vitest, Testing Library, ESLint | 백엔드·프론트엔드 테스트와 코드 품질 검사 |
+
+> Docker Compose와 MySQL은 로컬 개발 환경에서 사용하며, 운영 환경은 Render와 TiDB Cloud로 구성합니다. 현재 프로젝트는 Nginx를 직접 사용하지 않고 Render가 정적 파일 제공과 프록시 역할을 담당합니다.
