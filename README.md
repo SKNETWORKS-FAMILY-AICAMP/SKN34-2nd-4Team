@@ -86,22 +86,59 @@ CardOps는 신용카드 고객 데이터를 바탕으로 고객의 이탈 가능
 
 # 3. 기술 스택
 
-| 구분 | 기술 | 활용 |
-| --- | --- | --- |
-| Frontend | React 19, TypeScript 5.9, Vite 8 | 사용자 인증, 고객 조회, 부서별 대시보드 및 캠페인 화면 구현 |
-| Visualization | Recharts 3 | 이탈 위험도, 고객 분포, 모델 및 캠페인 성과 시각화 |
-| Backend | Python 3.13, FastAPI, Uvicorn, Pydantic | REST API, 요청 검증, 인증 및 머신러닝 모델 서빙 |
-| Authentication | JWT, Argon2, HttpOnly Cookie | 사용자 인증, 비밀번호 해시, 역할별 접근 제어 |
-| Database | TiDB Cloud, MySQL 8.4, SQLAlchemy, PyMySQL | 운영·로컬 데이터 저장, ORM 및 MySQL 프로토콜 연결 |
-| Migration | Alembic | 데이터베이스 스키마 버전 관리 및 마이그레이션 |
-| Data Analysis | Pandas, NumPy, PyArrow | 데이터 정제, 전처리, 분석 및 배치 처리 |
-| Machine Learning | scikit-learn, LightGBM, XGBoost | 분류·회귀·군집 모델 학습, 평가 및 예측 |
-| Hyperparameter Search | GridSearchCV, RandomizedSearchCV, Optuna | 모델별 하이퍼파라미터 탐색 및 성능 비교 |
-| Model Artifact | Joblib | 학습된 분류·회귀·군집 모델 저장 및 FastAPI 적재 |
-| Face Authentication | ONNX Runtime, OpenCV, SCRFD, ArcFace | 얼굴 검출, 임베딩 생성 및 얼굴 인증 |
-| Local Infrastructure | Docker, Docker Compose | Frontend, Backend, Model Builder, MySQL 로컬 실행 환경 구성 |
-| Deployment | Render Web Service, Render Static Site | FastAPI 백엔드와 React 정적 사이트 배포 |
-| Collaboration | Git, GitHub | 소스 코드 버전 관리, 브랜치 병합 및 Render 자동 배포 연동 |
-| Test & Quality | Pytest, Vitest, Testing Library, ESLint | 백엔드·프론트엔드 테스트와 코드 품질 검사 |
+## Frontend
+
+<img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black"/>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white"/>
+<img src="https://img.shields.io/badge/Recharts-22B5BF?style=flat-square&logoColor=white"/>
+<img src="https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white"/>
+
+## Backend & Database
+
+<img src="https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=ffdd54"/>
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
+<img src="https://img.shields.io/badge/Uvicorn-499848?style=flat-square&logoColor=white"/>
+<img src="https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white"/>
+<img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white"/>
+<img src="https://img.shields.io/badge/PyMySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/Alembic-6BA539?style=flat-square&logoColor=white"/>
+<img src="https://img.shields.io/badge/MySQL_8.4-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+<img src="https://img.shields.io/badge/TiDB_Cloud-ED1C24?style=flat-square&logo=tidb&logoColor=white"/>
+<img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white"/>
+
+## Data & Machine Learning
+
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
+<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
+<img src="https://img.shields.io/badge/PyArrow-1590FF?style=flat-square&logo=apache&logoColor=white"/>
+<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"/>
+<img src="https://img.shields.io/badge/LightGBM-2C3E50?style=flat-square&logoColor=white"/>
+<img src="https://img.shields.io/badge/XGBoost-EC4E20?style=flat-square&logoColor=white"/>
+<img src="https://img.shields.io/badge/Optuna-2D64BC?style=flat-square&logoColor=white"/>
+<img src="https://img.shields.io/badge/Joblib-3B5526?style=flat-square&logoColor=white"/>
+<img src="https://img.shields.io/badge/ONNX_Runtime-005CED?style=flat-square&logo=onnx&logoColor=white"/>
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white"/>
+<img src="https://img.shields.io/badge/SCRFD-FF6F00?style=flat-square&logoColor=white"/>
+<img src="https://img.shields.io/badge/ArcFace-FF4B4B?style=flat-square&logoColor=white"/>
+
+## Infrastructure & Collaboration
+
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/Docker_Compose-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+<img src="https://img.shields.io/badge/Render-000000?style=flat-square&logo=render&logoColor=white"/>
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white"/>
+
+## Test & Quality
+
+<img src="https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white"/>
+<img src="https://img.shields.io/badge/Testing_Library-E33332?style=flat-square&logo=testinglibrary&logoColor=white"/>
+<img src="https://img.shields.io/badge/ESLint-4B32C3?style=flat-square&logo=eslint&logoColor=white"/>
 
 > Docker Compose와 MySQL은 로컬 개발 환경에서 사용하며, 운영 환경은 Render와 TiDB Cloud로 구성합니다. 현재 프로젝트는 Nginx를 직접 사용하지 않고 Render가 정적 파일 제공과 프록시 역할을 담당합니다.
