@@ -104,8 +104,6 @@ CardOps는 신용카드 고객 데이터를 바탕으로 고객의 이탈 가능
   </tr>
 </table>
 
-> Docker Compose와 MySQL은 로컬 개발 환경에서 사용하며, 운영 환경은 Render와 TiDB Cloud로 구성합니다. 현재 프로젝트는 Nginx를 직접 사용하지 않고 Render가 정적 파일 제공과 프록시 역할을 담당합니다.
-
 <br />
 
 # 4. 시스템 아키텍처
